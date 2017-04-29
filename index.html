@@ -5,50 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Foundations</title>
     <link rel="stylesheet" href="static/main.min.css">
+    <link rel="stylesheet" href="static/demo.min.css">
 </head>
 <body>
     <header>
-        <h1>Frontend Foundations</h1>
+        <h1 class="heading--large">
+            Frontend Foundations
+            <span class="heading__sub">BEM based CSS elements to jump-start a new project</span>
+        </h1>
     </header>
 
     <main>
-        <div class="grid grid--v-gutter">
-            <div class="grid__col">
-                <p>Full width</p>
-
-                <div class="grid grid--nested">
-                    <div class="grid__col grid__col--one-half">
-                        <p>One half</p>
-                        <p>One half</p>
-                        <p>One half</p>
-                        <p>One half</p>
-                        <p>One half</p>
+        <section>
+            <div class="grid center">
+                <div class="grid__col grid__col--full">
+                    <div class="limit-text-width">
+                        <h2 class="heading--medium">Grid</h2>
+                        <p>A nestable 12 column percentage based grid, with 30px gutters.</p>
                     </div>
-                    <div class="grid__col grid__col--one-half">
-                        <p>One half</p>
+                </div>
+            </div>
 
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--full">
+                    <div class="demo-grid-square">
+                        <p>Full width</p>
+                    
                         <div class="grid grid--nested">
-                            <div class="grid__col grid__col--one-half">
-                                <p>One half</p>
+                            <div class="grid__col grid__col--one-third">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested one third</p>
+                                </div>
                             </div>
-                            <div class="grid__col grid__col--one-half">
-                                <p>One half</p>
+                            <div class="grid__col grid__col--one-third">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested one third</p>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col--one-third">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested one third</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="grid grid--v-gutter">
-            <div class="grid__col grid__col--one-half">
-                <p>One half</p>
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--one-half">
+                    <div class="demo-grid-square">
+                        <p>One half</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--one-half">
+                    <div class="demo-grid-square">
+                        <p>One half</p>
+                    </div>
+                </div>
             </div>
-            <div class="grid__col grid__col--one-half">
-                <p>One half</p>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--one-quarter">
+                    <div class="demo-grid-square">
+                        <p>One quarter</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--one-quarter">
+                    <div class="demo-grid-square">
+                        <p>One quarter</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--one-twelfth">
+                    <div class="demo-grid-square">
+                        <p>1/12</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--five-twelfths">
+                    <div class="demo-grid-square">
+                        <p>Five twelfths</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <p>Test <a href="#">test link</a>.</p>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--seven-twelfths">
+                    <div class="demo-grid-square">
+                        <p>Seven twelfths</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--one-quarter">
+                    <div class="demo-grid-square">
+                        <p>One quarter</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--two-twelfths">
+                    <div class="demo-grid-square">
+                        <p>2/12</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid center">
+                <div class="grid__col grid__col--full">
+                    <div class="limit-text-width">
+                        <h2 class="heading--medium">Responsive Grid</h2>
+                        <p class="">A nestable 12 column percentage based grid, with 30px gutters. Set different grid patterns for small, medium & large screens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--full">
+                    <div class="demo-grid-square">
+                        <p>Full width</p>
+                    
+                        <div class="grid grid--nested">
+                            <div class="grid__col grid__col--large-one-third grid__col--medium-full grid__col--small-full">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested Large: 1/3, Medium/small: full</p>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col--large-one-third grid__col--medium-full grid__col--small-full">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested Large: 1/3, Medium/small: full</p>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col--large-one-third grid__col--medium-full grid__col--small-full">
+                                <div class="demo-grid-square demo-grid-square--nested">
+                                    <p>Nested Large: 1/3, Medium/small: full</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--large-one-half grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large/Medium: 1/2, small: full</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-one-half grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large/Medium: 1/2, small: full</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--large-one-quarter grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large: 1/4, Medium: 1/2, Small: full</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-one-quarter grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large: 1/4, Medium: 1/2, Small: full</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-one-quarter grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large: 1/4, Medium: 1/2, Small: full</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-one-quarter grid__col--medium-one-half grid__col--small-full">
+                    <div class="demo-grid-square">
+                        <p>Large: 1/4, Medium: 1/2, Small: full</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid--v-gutter">
+                <div class="grid__col grid__col--large-seven-twelfths grid__col--medium-seven-twelfths grid__col--small-one-half">
+                    <div class="demo-grid-square">
+                        <p>Large: 7/12, Medium: 7/12, Small: 1/2</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-one-quarter grid__col--medium-five-twelfths grid__col--small-one-half">
+                    <div class="demo-grid-square">
+                        <p>Large: 1/4, Medium: 5/12, Small: 1/2</p>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--large-two-twelfths grid__col--medium-hide  grid__col--small-hide ">
+                    <div class="demo-grid-square">
+                        <p>L: 2/12, m/s: hidden</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </body>

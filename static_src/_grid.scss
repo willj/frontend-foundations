@@ -56,7 +56,7 @@
     width: 75%;
 }
 
-@each $width, $multiplier in (one-tweflth: 1, two-twelfths: 2, five-twelfths: 5, seven-twelfths: 7, ten-twelfths: 10, eleven-twelfths: 11) {
+@each $width, $multiplier in (one-twelfth: 1, two-twelfths: 2, five-twelfths: 5, seven-twelfths: 7, ten-twelfths: 10, eleven-twelfths: 11) {
     .grid__col--#{$width} { 
         width: 8.333333% * $multiplier; 
     }  

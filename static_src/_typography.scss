@@ -19,3 +19,10 @@ h1, h2, h3, h4, h5, h6{
 .heading--small {
     font-size: 1.5em;
 }
+
+.heading__sub {
+    display: block;
+    color: lighten($textColor, 40);
+    font-size: 0.6em;
+    font-weight: lighter;
+}

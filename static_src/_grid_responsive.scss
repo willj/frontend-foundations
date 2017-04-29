@@ -1,0 +1,63 @@
+/************ Responsive columns ****************/
+/* 
+    Column widths for small/med/large breakpoints 
+    Use combinations to control when the grid collapses
+*/
+
+
+// mediaQuery mixin inspired by: http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
+@mixin mediaQuery($constraint, $size1, $size2: 0) {
+    @if $constraint == min-max {
+        @media screen and (min-width: $size1) and (max-width: $size2) {
+            @content;
+        }
+    } @else {
+        @media screen and ($constraint: $size1) {
+            @content;
+        }
+    }
+}
+
+@mixin columns($sizeName, $constraint, $size1, $size2: 0) {
+    
+    @include mediaQuery($constraint, $size1, $size2) {
+        .grid__col--#{$sizeName}-hide {
+            display: none;
+        }
+
+        .grid__col--#{$sizeName}-full {
+            width: 100%;
+        }
+
+        .grid__col--#{$sizeName}-one-half {
+            width: 50%;
+        }
+
+        .grid__col--#{$sizeName}-one-third {
+            width: 33.333333%;
+        }
+
+        .grid__col--#{$sizeName}-two-thirds {
+            width: 66.666666%;
+        }
+
+        .grid__col--#{$sizeName}-one-quarter {
+            width: 25%;
+        }
+
+        .grid__col--#{$sizeName}-three-quarters {
+            width: 75%;
+        }
+
+        @each $width, $multiplier in (one-twelfth: 1, two-twelfths: 2, five-twelfths: 5, seven-twelfths: 7, ten-twelfths: 10, eleven-twelfths: 11) {
+            .grid__col--#{$sizeName}-#{$width} { 
+                width: 8.333333% * $multiplier; 
+            }  
+        }
+
+    }
+}
+
+@include columns(large, min-width, $medBreakpoint);
+@include columns(medium, min-max, $smallBreakpoint, $medBreakpoint);
+@include columns(small, max-width, $smallBreakpoint);
