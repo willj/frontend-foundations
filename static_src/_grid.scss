@@ -19,11 +19,20 @@
     margin-bottom: 30px;
 }
 
+/************ Universal columns ****************/
+/* 
+    These don't collapse, even on tiny screens 
+    See _grid_responsive for breakpoint based columns
+*/
+
 .grid__col {
     box-sizing: border-box;
     float: left;
     padding: 0 15px;
     min-height: 1px;
+}
+
+.grid__col--full {
     width: 100%;
 }
 
@@ -48,7 +57,7 @@
 }
 
 @each $width, $multiplier in (one-tweflth: 1, two-twelfths: 2, five-twelfths: 5, seven-twelfths: 7, ten-twelfths: 10, eleven-twelfths: 11) {
-    .grid__col-#{$width} { 
+    .grid__col--#{$width} { 
         width: 8.333333% * $multiplier; 
     }  
 }
