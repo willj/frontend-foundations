@@ -1,0 +1,38 @@
+.button {
+    position: relative;
+    display: block;
+    margin: 0.8em auto;
+    color: $buttonTextColor;
+    border-radius: $borderRadius;
+    border:1px solid $buttonBorderColor;
+    background-color: $buttonBackgroundColor;
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+.button:hover {
+    background-color: $buttonTextColor;
+    color: $buttonBackgroundColor;
+    border-color: $buttonBackgroundColor;
+}
+
+.button__content--loading {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 8px 20px;
+}
+
+.button--loading .button__content--default {
+    visibility: hidden;
+}
+
+.button--loading .button__content--loading {
+    display: block;
+}
