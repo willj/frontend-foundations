@@ -62,7 +62,7 @@
     width: 100%;
     border: 1px solid $borderColor;
     border-radius: $borderRadius;
-    padding: 5px;
+    padding: 9px;
     font-family: $defaultFontStack;
 }
 
@@ -144,6 +144,6 @@
     visibility: visible;
 }
 
-.form__field--error input{
+.form__field--error input, .form__field--error select, .form__field--error textarea{
     border: 1px solid $errorColor;
 }

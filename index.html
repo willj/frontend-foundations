@@ -198,6 +198,136 @@
             </div>
         </section>
 
+        <section>
+            <div class="grid center">
+                <div class="grid__col grid__col--full">
+                    <div class="limit-text-width">
+                        <h2 class="heading--medium">Buttons</h2>
+
+                        <button type="submit" class="button">
+                            <span class="button__content--default">Submit</span>
+                            <span class="button__content--loading loading-indicator"><span>&bull;</span><span>&bull;</span><span>&bull;</span></span>
+                        </button>
+
+                        <button type="submit" class="button button--loading">
+                            <span class="button__content--default">Submit</span>
+                            <span class="button__content--loading loading-indicator"><span>&bull;</span><span>&bull;</span><span>&bull;</span></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid center">
+                <div class="grid__col grid__col--full">
+                    <div class="limit-text-width">
+                        <h2 class="heading--medium">Forms</h2>
+
+                        <form class="entry-form" method="post">
+
+                            <div class="form__field" data-required="true">
+                                <label for="Entry.Name" class="form__label">Name <span class="form__validation-hint">(Required)</span></label>
+                                <input type="text" name="Entry.Name" id="Entry.Name" class="form__textbox" />
+                            </div>
+
+                            <div class="form__field form__field--error" data-required="true">
+                                <label for="Entry.ErrTest" class="form__label">Field with an error <span class="form__validation-hint">(Required)</span></label>
+                                <input type="text" name="Entry.ErrTest" id="Entry.ErrTest" class="form__textbox" />
+                            </div>
+
+                            <div class="form__field">
+                                <label for="Entry.Email" class="form__label">Email <span class="form__validation-hint">(Required)</span></label>
+                                <input type="email" name="Entry.Email" id="Entry.Email" class="form__textbox" />
+                            </div>
+
+                            <div class="form__field">
+                                <label for="Entry.FavouriteSnack" class="form__label">Favourite Snack <span class="form__validation-hint">(Required)</span></label>
+                                <select name="Entry.FavouriteSnack" id="Entry.FavouriteSnack" class="form__selectbox">
+                                    <option value="">Choose your favourite snack</option>
+                                    <option>Pizza</option>
+                                    <option>Chocolate</option>
+                                    <option>Ice Cream</option>
+                                    <option>Cheese</option>
+                                    <option>Biscuits</option>
+                                </select>
+                            </div>
+
+                            <div class="form__field form__field--error">
+                                <label for="Entry.FavouriteSnack" class="form__label">Snack with an error <span class="form__validation-hint">(Required)</span></label>
+                                <select name="Entry.FavouriteSnack" id="Entry.FavouriteSnack" class="form__selectbox">
+                                    <option value="">Choose your favourite snack</option>
+                                    <option>Pizza</option>
+                                    <option>Chocolate</option>
+                                    <option>Ice Cream</option>
+                                    <option>Cheese</option>
+                                    <option>Biscuits</option>
+                                </select>
+                            </div>
+
+                            <div class="form__field">
+                                <label class="form__label">Date of birth <span class="form__validation-hint">(required)</span></label>
+
+                                <div class="form__column form__column--one-third">
+                                    <label for="Entry.DobDay" class="form__label form__label--small">Day</label>
+                                    <input type="number" name="Entry.DobDay" id="Entry.DobDay" class="form__textbox" />
+                                </div>
+
+                                <div class="form__column form__column--one-third">
+                                    <label for="Entry.DobMonth" class="form__label form__label--small">Month</label>
+                                    <select name="Entry.DobMonth" id="Entry.DobMonth" class="form__selectbox">
+                                        <option value="">Month</option>
+                                        <option value="1">Jan</option>
+                                        <option value="2">Feb</option>
+                                        <option value="3">Mar</option>
+                                        <option value="4">Apr</option>
+                                        <option value="5">May</option>
+                                        <option value="6">Jun</option>
+                                        <option value="7">Jul</option>
+                                        <option value="8">Aug</option>
+                                        <option value="9">Sep</option>
+                                        <option value="10">Oct</option>
+                                        <option value="11">Nov</option>
+                                        <option value="12">Dec</option>
+                                    </select>
+                                </div>
+
+                                <div class="form__column form__column--one-third">
+                                    <label for="Entry.DobYear" class="form__label form__label--small">Year</label>
+                                    <input type="number" name="Entry.DobYear" id="Entry.DobYear" class="form__textbox" />
+                                </div>
+                            </div>
+
+                            <div class="form__field">
+                                <input type="checkbox" name="Entry.AgreeTerms" id="Entry.AgreeTerms" data-bind="checked: entry.AgreeTerms" value="true" class="form__checkbox" />
+                                <label for="Entry.AgreeTerms" class="form__checkbox-label">
+                                    <svg class="form__checkbox-svg" xmlns="http://www.w3.org/2000/svg" baseProfile="full" viewBox="0 0 34.00 34.00">
+                                        <path class="form__checkbox-svg-box" fill="#FFF" stroke-width="2" stroke-linejoin="round" stroke="#000" d="M6 1h22c2.76 0 5 2.24 5 5v22c0 2.76-2.24 5-5 5H6c-2.76 0-5-2.24-5-5V6c0-2.76 2.24-5 5-5z" />
+                                        <path class="form__checkbox-svg-check" fill="#FFF" stroke-width="5" stroke-linejoin="round" stroke="#000" d="M6.5 18.962l7.846 6.538 14.385-17" />
+                                    </svg>
+                                    I agree to the terms and conditions
+                                </label>
+                            </div>
+
+                            <div class="form__validation-summary">
+                                <p>A general validation error</p>
+                                <p>Something else is wrong too...</p>
+                            </div>
+
+                            <button type="submit" class="button">
+                                <span class="button__content--default">Submit</span>
+                                <span class="button__content--loading loading-indicator"><span>&bull;</span><span>&bull;</span><span>&bull;</span></span>
+                            </button>
+                        </form>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 </body>
